@@ -1,6 +1,6 @@
-from src.hello import hello
+from selective_editor import hello_fn
 
 
 def test_hello():
-    res = hello()
+    res = hello_fn()
     assert res == "World"
