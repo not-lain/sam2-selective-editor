@@ -1,4 +1,4 @@
-from src.hello import hello
+from selective_editor import hello
 
 
 def test_hello():
