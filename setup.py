@@ -11,8 +11,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 with open("requirements.txt", "r", encoding="utf-8") as f:
-    requirements = f.read().splitlines()
-
+    requirements = [
+        req for req in f.read().splitlines() if req and not req.startswith("#")
+    ]
 
 setuptools.setup(
     name="selective_editor",
@@ -25,7 +26,7 @@ setuptools.setup(
     url="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     packages=find_packages("src"),
     package_dir={"": "src"},
-    requires=requirements,
+    install_requires=requirements,
     extras_require={
         "dev": ["pytest"],
     },
