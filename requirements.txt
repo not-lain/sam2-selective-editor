@@ -4,4 +4,4 @@ typing
 supervision 
 gradio 
 loadimg
-git+https://github.com/facebookresearch/sam2.git # takes a lot of time to install
+sam2 @ git+https://github.com/facebookresearch/sam2.git # takes a lot of time to install
