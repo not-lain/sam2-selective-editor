@@ -4,3 +4,4 @@ typing
 supervision 
 gradio 
 loadimg
+git+https://github.com/facebookresearch/sam2#egg=sam2
