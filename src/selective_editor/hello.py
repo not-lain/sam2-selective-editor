@@ -1,2 +1,2 @@
-def hello() -> str:
+def hello_fn() -> str:
     return "World"
