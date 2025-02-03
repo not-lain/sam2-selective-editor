@@ -10,6 +10,10 @@ with open("./src/selective_editor/__init__.py", "r") as f:
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with open("requirements.txt", "r", encoding="utf-8") as f:
+    requirements = f.read().splitlines()
+
+
 setuptools.setup(
     name="selective_editor",
     version=version,
@@ -24,8 +28,9 @@ setuptools.setup(
     ],
     packages=find_packages("src"),
     package_dir={"": "src"},
+    requires=requirements,
     extras_require={
-        "dev": ["flake8", "black==22.3.0", "isort", "twine", "pytest", "wheel"],
+        "dev": ["pytest"],
     },
     classifiers=[
         "Programming Language :: Python :: 3.9",
