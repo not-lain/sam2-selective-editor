@@ -18,7 +18,7 @@ app.launch()
 
 ```mermaid
 graph TD
-    A[Launch app] -->|upload image| B[<img src='./assets/baseline.png'/>]
-    B -->|click to select image mask| C[<img src='./assets/segmented.png'/>]
-    C -->|inpaint image| D[<img src='./assets/red car.png'/>]
+    A[Launch app] -->|upload image| B[<img src='https://github.com/not-lain/selective-editor/blob/update-readme/assets/baseline.png?raw=true'/>]
+    B -->|click to select image mask| C[<img src='https://github.com/not-lain/selective-editor/blob/update-readme/assets/segmented.png?raw=true'/>]
+    C -->|inpaint image| D[<img src='https://github.com/not-lain/selective-editor/blob/update-readme/assets/red car.png?raw=true'/>]
 ```
