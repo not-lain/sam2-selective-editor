@@ -4,8 +4,14 @@ import supervision as sv
 from loadimg import load_img
 import gradio as gr
 from gradio_client import Client, handle_file
+import logging
 
-from sam2.sam2_image_predictor import SAM2ImagePredictor
+logger = logging.getLogger(__name__)
+
+try:
+    from sam2.sam2_image_predictor import SAM2ImagePredictor
+except ImportError:
+    logger.error("Please install the sam2 library to run this app")
 
 
 def process_selection(base_img, selected, legend, hidden_mask, evt: gr.SelectData):
