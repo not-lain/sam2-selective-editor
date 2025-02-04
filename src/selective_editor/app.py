@@ -63,7 +63,7 @@ def inpaint(img, mask, prompt, num_inference_steps, guidance_scale):
     return out_img
 
 
-def upload(img):
+def upload(img=None):
     return img, None, None
 
 
