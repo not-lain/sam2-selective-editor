@@ -28,8 +28,10 @@ graph TD
 
 ## Example
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-    <img src="assets/baseline.png" style="height: 150px; width: auto;" />
-    <img src="assets/segmented.png" style="height: 150px; width: auto;" />
-    <img src="assets/red car.png" style="height: 150px; width: auto;" />
-</div>
+<p align="center">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <img src="assets/baseline.png" style="height: 150px; width: auto;" />
+        <img src="assets/segmented.png" style="height: 150px; width: auto;" />
+        <img src="assets/red car.png" style="height: 150px; width: auto;" />
+    </div>
+</p>
