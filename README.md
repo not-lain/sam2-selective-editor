@@ -13,3 +13,12 @@ from selective_editor import get_app
 app = get_app()
 app.launch()
 ```
+
+## Example
+
+```mermaid
+graph TD
+    A[Launch app] -->|upload image| B[<img src='./assets/baseline.png'/>]
+    B -->|click to select image mask| C[<img src='./assets/segmented.png'/>]
+    C -->|inpaint image| D[<img src='./assets/red car.png'/>]
+```
