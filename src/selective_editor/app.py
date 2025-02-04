@@ -86,10 +86,10 @@ def get_app():
         with gr.Row():
             with gr.Column():
                 base_img = gr.Image(
-                    visible=False
+                    value=car, visible=False
                 )  # invisible holder of original image before transformation
                 hidden_mask = gr.Image(visible=False)  # invisible
-                img = gr.Image(interactive=True)
+                img = gr.Image(value=car, interactive=True)
                 selected = gr.Radio(
                     ["add point", "avoid point"], value="add point", label="label"
                 )
@@ -102,12 +102,10 @@ def get_app():
                     reset = gr.Button("Reset", variant="secondary")
                     btn = gr.Button("Inpaint", variant="primary")
                 legend = gr.JSON(label="legend", visible=False)
-                gr.Examples([[car]], [img])
             with gr.Column():
                 out = gr.Image()
 
         img.upload(upload, [img], [base_img, hidden_mask, legend])
-        img.change(upload, [img], [base_img, hidden_mask, legend])
         img.select(
             process_selection,
             [base_img, selected, legend, hidden_mask],
