@@ -63,8 +63,8 @@ def inpaint(img, mask, prompt, num_inference_steps, guidance_scale):
     return out_img
 
 
-def upload(img):
-    return img
+def upload(img=None):
+    return img, None, None
 
 
 def reset_fn(base_img, img, legend, hidden_mask):
@@ -105,7 +105,7 @@ def get_app():
             with gr.Column():
                 out = gr.Image()
 
-        img.upload(upload, [img], base_img)
+        img.upload(upload, [img], [base_img, hidden_mask, legend])
         img.select(
             process_selection,
             [base_img, selected, legend, hidden_mask],
@@ -121,6 +121,7 @@ def get_app():
             [base_img, img, legend, hidden_mask],
             [base_img, img, legend, hidden_mask],
         )
+
     return demo
 
 
