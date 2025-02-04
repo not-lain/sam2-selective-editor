@@ -25,3 +25,10 @@ graph TD
     C -->|inpaint image| D[describe what you want to create and press inpaint];
     D --> E[download final image];
 ```
+
+## Example
+<p align="center">
+    <img src="assets/baseline.png" height="200" style="display: inline-block;" />
+    <img src="assets/segmented.png" height="200" style="display: inline-block;" />
+    <img src="assets/red car.png" height="200" style="display: inline-block;" />
+</p>
