@@ -14,11 +14,14 @@ app = get_app()
 app.launch()
 ```
 
-## Example
+## Pipeline
 
 ```mermaid
 graph TD
-    A[Launch app] -->|upload image| B[<img src='https://github.com/not-lain/selective-editor/blob/update-readme/assets/baseline.png?raw=true' width='40' height='40'/>]
-    B -->|click to select image mask| C[<img src='https://github.com/not-lain/selective-editor/blob/update-readme/assets/segmented.png?raw=true' width='40' height='40'/>]
-    C -->|inpaint image| D[<img src='https://github.com/not-lain/selective-editor/blob/update-readme/assets/red%20car.png?raw=true' width='40' height='40'/>]
+    A[Launch app] --> B[upload image];
+    C -->|reset mask| F[in case you want to reslect your mask from scratch];
+    F --> |initial state| C;
+    B -->|click to select image mask| C[you can select included points and for complex objects you can exclude certain areas];
+    C -->|inpaint image| D[describe what you want to create and press inpaint];
+    D --> E[download final image];
 ```
