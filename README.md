@@ -27,8 +27,9 @@ graph TD
 ```
 
 ## Example
-<p align="center">
-    <img src="assets/baseline.png" height="200" style="display: inline-block;" />
-    <img src="assets/segmented.png" height="200" style="display: inline-block;" />
-    <img src="assets/red car.png" height="200" style="display: inline-block;" />
-</p>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+    <img src="assets/baseline.png" style="height: 150px; width: auto;" />
+    <img src="assets/segmented.png" style="height: 150px; width: auto;" />
+    <img src="assets/red car.png" style="height: 150px; width: auto;" />
+</div>
