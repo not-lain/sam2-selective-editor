@@ -27,8 +27,9 @@ setuptools.setup(
     packages=find_packages("src"),
     package_dir={"": "src"},
     install_requires=requirements,
+    requires=["torch"],
     extras_require={
-        "dev": ["pytest"],
+        "dev": ["pytest", "torch"],
     },
     classifiers=[
         "Programming Language :: Python :: 3.10",
