@@ -4,4 +4,3 @@ typing
 supervision 
 gradio 
 loadimg
-spaces
