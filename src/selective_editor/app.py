@@ -3,11 +3,13 @@ import torch
 import supervision as sv
 from loadimg import load_img
 import gradio as gr
+import spaces
 from gradio_client import Client, handle_file
 
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 
 
+@spaces.GPU
 def process_selection(base_img, selected, legend, hidden_mask, evt: gr.SelectData):
     # process input
     label = 1 if selected == "add point" else 0
@@ -86,10 +88,10 @@ def get_app():
         with gr.Row():
             with gr.Column():
                 base_img = gr.Image(
-                    value=car, visible=False
+                    visible=False
                 )  # invisible holder of original image before transformation
                 hidden_mask = gr.Image(visible=False)  # invisible
-                img = gr.Image(value=car, interactive=True)
+                img = gr.Image(interactive=True)
                 selected = gr.Radio(
                     ["add point", "avoid point"], value="add point", label="label"
                 )
@@ -102,10 +104,12 @@ def get_app():
                     reset = gr.Button("Reset", variant="secondary")
                     btn = gr.Button("Inpaint", variant="primary")
                 legend = gr.JSON(label="legend", visible=False)
+                gr.Examples([[car]], [img])
             with gr.Column():
                 out = gr.Image()
 
-        img.upload(upload, [img], base_img)
+        img.upload(upload, [img], [base_img, hidden_mask, legend])
+        img.change(upload, [img], [base_img, hidden_mask, legend])
         img.select(
             process_selection,
             [base_img, selected, legend, hidden_mask],
@@ -121,6 +125,7 @@ def get_app():
             [base_img, img, legend, hidden_mask],
             [base_img, img, legend, hidden_mask],
         )
+
     return demo
 
 
