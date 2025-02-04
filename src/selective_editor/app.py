@@ -64,7 +64,7 @@ def inpaint(img, mask, prompt, num_inference_steps, guidance_scale):
 
 
 def upload(img):
-    return img
+    return img, None, None
 
 
 def reset_fn(base_img, img, legend, hidden_mask):
