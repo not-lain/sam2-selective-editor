@@ -35,3 +35,10 @@ graph TD
         <img src="assets/red car.png" style="height: 150px; width: auto;" />
     </div>
 </p>
+
+## Notebooks
+
+| Description | Link |
+| --- | --- |
+| Notebook with pip integration | <a href="https://colab.research.google.com/github/not-lain/selective-editor/blob/main/slective_editor_pip_notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+| Manually laid out script | <a href="https://colab.research.google.com/github/not-lain/selective-editor/blob/main/selective_editor_manual_notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
