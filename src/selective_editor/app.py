@@ -9,7 +9,7 @@ from gradio_client import Client, handle_file
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 
 
-@spaces.GPU
+@spaces.GPU(duration=120)
 def process_selection(base_img, selected, legend, hidden_mask, evt: gr.SelectData):
     # process input
     label = 1 if selected == "add point" else 0
