@@ -40,5 +40,5 @@ graph TD
 
 | Description | Link |
 | --- | --- |
-| Notebook with pip integration | <a href="https://colab.research.google.com/github/not-lain/selective-editor/blob/main/notebooks/slective_editor_pip_notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+| Notebook with pip integration | <a href="https://colab.research.google.com/github/not-lain/selective-editor/blob/main/notebooks/slective_editor_pip_notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> <a href="https://youtu.be/t38OoY1Q3wg" target="_parent"><img src="https://badges.aleen42.com/src/youtube.svg" alt="Open In Colab"/></a> 
 | Manually laid out script | <a href="https://colab.research.google.com/github/not-lain/selective-editor/blob/main/notebooks/selective_editor_manual_notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |

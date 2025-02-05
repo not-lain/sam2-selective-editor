@@ -20,7 +20,7 @@ setuptools.setup(
     version=version,
     author="Hafedh Hichri",
     author_email="hhichri60@gmail.com",
-    description="A user interface tool for selective image inpainting - allows users to select and remove objects from images",
+    description="A user interface tool for selective image inpainting - allows users to select and edit objects from images",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/not-lain/selective-editor",
